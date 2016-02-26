@@ -1,5 +1,5 @@
 # spark-for-data-scientists
-An introduction to Spark for data scientists. These slides loosely Karau et al's [Learning Spark: Lightning-Fast Big Data Analysis](https://www.manning.com/books/functional-programming-in-scala). 
+An introduction to Spark for data scientists. These slides loosely Karau et al's [Learning Spark: Lightning-Fast Big Data Analysis](http://shop.oreilly.com/product/0636920028512.do). 
 
 Slides are viewable [here](http://cem3394.github.io/scala-for-data-scientists).
 
