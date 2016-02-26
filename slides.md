@@ -1,5 +1,5 @@
 <div style="border-radius: 10px; background: #EEEEEE; padding: 20px; text-align: center; font-size: 1.5em">
-  <big><b>Introduction to Scala </b></big> </br>
+  <big><b>Spark for Data Scientists</b></big> </br>
   </br>
 
   <code>chris@datascience.com</code>
