@@ -15,7 +15,7 @@
 
 * [Spark Project Docs](http://spark.apache.org/documentation.html)
 * Karau et al's [Learning Spark: Lightning-Fast Big Data Analysis](http://shop.oreilly.com/product/0636920028512.do)
-* This course's [Github Project](https://github.com/cem3394/scala-for-data-scientists/tree/gh-pages)
+* This course's [Github Project](https://github.com/cem3394/spark-for-data-scientists/tree/gh-pages)
 
 ---
 
