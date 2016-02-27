@@ -73,7 +73,7 @@
   <big><b>Spark for Data Scientists</b></big> </br>
   </br>
 
-  <code>{chris, jason}@datascience.com</code>
+  <code>{chris,jason}@datascience.com</code>
   <br/>
   <br/>
 
@@ -95,7 +95,7 @@
             </aside>
             
             <aside class="page_number">
-              1/24
+              1/38
             </aside>
 
           </footer>
@@ -132,7 +132,7 @@
             </aside>
             
             <aside class="page_number">
-              2/24
+              2/38
             </aside>
 
           </footer>
@@ -163,7 +163,7 @@
             </aside>
             
             <aside class="page_number">
-              3/24
+              3/38
             </aside>
 
           </footer>
@@ -175,10 +175,13 @@
         <div class="slide">
           <div class="inner">
             
-            <header><h1>What is Spark?</h1></header>
+            <header><h1>Matei Zaharia</h1></header>
             
             
-            <section><p>Spark extends the popular MapReduce model to efficiently support a wider range of computations.</p></section>
+            <section><p><img alt="" src="img/matei_zaharia.jpg" />
+$$
+$$
+"One of the Spark project goals was to deliver a platform that supports a very wide array of diverse workflows - not only MapReduce batch jobs (there were available in Hadoop already at that time), but also iterative computations like graph algorithms or Machine Learning. And also different scales of workloads from sub-second interactive jobs to jobs that run for many hours."</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -196,7 +199,7 @@
             </aside>
             
             <aside class="page_number">
-              4/24
+              4/38
             </aside>
 
           </footer>
@@ -205,14 +208,15 @@
       
       <!-- slide source: slides.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_notes">
           <div class="inner">
             
             <header><h1>A Bit of History</h1></header>
             
             
             <section><p><img alt="" src="img/history.png" /></p>
-<p><a href="https://medium.com/@markobonaci/the-history-of-hadoop-68984a11704">https://medium.com/@markobonaci/the-history-of-hadoop-68984a11704</a></p></section>
+<p><a href="https://medium.com/@markobonaci/the-history-of-hadoop-68984a11704">https://medium.com/@markobonaci/the-history-of-hadoop-68984a11704</a></p>
+<p class="notes">https://www.youtube.com/watch?v=SxAxAhn-BDU</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -230,7 +234,7 @@
             </aside>
             
             <aside class="page_number">
-              5/24
+              5/38
             </aside>
 
           </footer>
@@ -264,7 +268,7 @@
             </aside>
             
             <aside class="page_number">
-              6/24
+              6/38
             </aside>
 
           </footer>
@@ -298,7 +302,7 @@
             </aside>
             
             <aside class="page_number">
-              7/24
+              7/38
             </aside>
 
           </footer>
@@ -332,7 +336,7 @@
             </aside>
             
             <aside class="page_number">
-              8/24
+              8/38
             </aside>
 
           </footer>
@@ -366,18 +370,23 @@
             </aside>
             
             <aside class="page_number">
-              9/24
+              9/38
             </aside>
 
           </footer>
         </div>
       </div>
       
-      <!-- slide source:  -->
+      <!-- slide source: slides.md -->
       <div class="slide-wrapper">
         <div class="slide">
           <div class="inner">
             
+            
+            <section><p>Apache Spark is an open-source, parallel, distributed, general-purpose cluster computing framework with distributed, in-memory data processing.
+$$
+$$
+In contrast to Hadoop’s two-stage disk-based MapReduce processing engine, Spark’s multi-stage in-memory computing engine allows for running most computations in memory, and hence provides better performance for iterative applications, e.g. machine learning algorithms and interactive data mining.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -390,8 +399,223 @@
 
           <footer>
             
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
             <aside class="page_number">
-              /24
+              10/38
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_notes">
+          <div class="inner">
+            
+            <header><h1>Why Scala: Productivity</h1></header>
+            
+            
+            <section><p>Basic syntax and Collections API are all that's needed to become productive with Spark.
+$$
+$$
+You use the same language (often the same code) for iterative exploration as you do for large jobs.</p>
+<p class="notes">Python and R are second-class citizens.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/38
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Why Scala: Ecosystem</h1></header>
+            
+            
+            <section><p>Scala integrates well with the big data eco-system, which is also JVM based.
+$$
+$$
+In addition to Scala-native frameworks like Spark and Kafka, there are many frameworks on top of Java libraries like Scalding (Cascading), Algebird / Summingbird (Scalding and Storm), Scrunch (Crunch), and Flink (Java core with Scala API).</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/38
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p>The Scala APIs are usually more flexible than say Hadoop streaming with Python/Perl, PySpark or Python/Ruby bolts in Storm, since you have direct access to the underlying API.
+$$
+$$
+There are also a wide range of data storage solutions that are built for or work well with JVM like Cassandra, HBase, Voldemort and Datomic.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/38
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Why Scala: Functional Paradigm</h1></header>
+            
+            
+            <section><p>A third benefit is the functional paradigm which fits well within the Map/Reduce and big data model.
+$$
+$$
+Batch processing works on top of immutable data, transforms with combinators, and generates new copies. Real time log streams are essentially lazy streams.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              14/38
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p>Most Scala data frameworks have the notion of some abstract data type that's extremely consistent with Scala's collection API.
+$$
+$$
+Glance at <code>TypedPipe</code> in Scalding and <code>RDD</code> in Spark, and you'll see that they all have the same set of combinator methods, e.g. <code>map</code>, <code>flatMap</code>, <code>filter</code>, <code>reduce</code>, <code>fold</code> and <code>groupBy</code>.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              15/38
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p>Many libraries also have frequent reference of category theory (eg monoids, monads, applicative functors etc) to guarantee the correctness of distributed operations.
+$$
+$$
+Equipped such knowledge it'll be a lot easier to understand techniques like map-side reduce.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              16/38
             </aside>
 
           </footer>
@@ -424,7 +648,7 @@
             </aside>
             
             <aside class="page_number">
-              10/24
+              17/38
             </aside>
 
           </footer>
@@ -460,40 +684,7 @@ RDD API will be our point of departure in this course.</p></section>
             </aside>
             
             <aside class="page_number">
-              11/24
-            </aside>
-
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.md -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Cluster Managers</h1></header>
-            
-            
-            <section><p>Spark can run over a variety of cluster managers, including Hadoop YARN, Apache Mesos, and a Spark's native Standalone Scheduler.</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-
-
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.md">slides.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              12/24
+              18/38
             </aside>
 
           </footer>
@@ -526,7 +717,7 @@ RDD API will be our point of departure in this course.</p></section>
             </aside>
             
             <aside class="page_number">
-              13/24
+              19/38
             </aside>
 
           </footer>
@@ -561,7 +752,7 @@ RDD API will be our point of departure in this course.</p></section>
             </aside>
             
             <aside class="page_number">
-              14/24
+              20/38
             </aside>
 
           </footer>
@@ -595,7 +786,7 @@ RDD API will be our point of departure in this course.</p></section>
             </aside>
             
             <aside class="page_number">
-              15/24
+              21/38
             </aside>
 
           </footer>
@@ -618,7 +809,7 @@ RDD API will be our point of departure in this course.</p></section>
 <p>Organizational costs associated with running the stack are minimized</p>
 </li>
 <li>
-<p>Combine different processing models</p>
+<p>Combine batch, interactive, and stream processing processing with a unified API</p>
 </li>
 </ul>
 <p class="notes">For example, when Spark’s core engine adds an optimization, SQL and machine learning libraries automatically speed up as well. These costs include deployment, maintenance, testing, support, and others. This also means that each time a new component is added to the Spark stack, every organization that uses Spark will immediately be able to try this new component.</p></section>
@@ -639,7 +830,7 @@ RDD API will be our point of departure in this course.</p></section>
             </aside>
             
             <aside class="page_number">
-              16/24
+              22/38
             </aside>
 
           </footer>
@@ -651,13 +842,8 @@ RDD API will be our point of departure in this course.</p></section>
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Why Scala: Productivity</h1></header>
             
-            
-            <section><p>In the big data &amp; machine learning world where most developers are from Python/R/Matlab background, Scala's syntax, or the subset needed for the domain, is a lot less intimidating than that of Java or C++.</p>
-<p>In my experience, basic syntax collections API and lambda (about 20% of the language features) is all that's needed for a new hire with no prior experience to become productive in processing data.</p>
-<p>At the same time, performance is usually better than traditional tools like Python or R. As one's skill develops over time, there's a clear transition path from imperative to more elegant FP style code while maintaining or even improving performance.</p>
-<p>The chart below clearly shows the growth of our main scalding repository over time. We spent a few months experimenting and after doubling the team size in early 2014, the number of jobs and LOC also exploded. Most developers have little Scala or even Java experience and some of the jobs are doing complex machine learning stuff.</p></section>
+            <section><p>Spark’s design is also fairly simple and the Scala codebase is fairly small relative to the features it offers.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -675,7 +861,7 @@ RDD API will be our point of departure in this course.</p></section>
             </aside>
             
             <aside class="page_number">
-              17/24
+              23/38
             </aside>
 
           </footer>
@@ -687,11 +873,16 @@ RDD API will be our point of departure in this course.</p></section>
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Why Scala: Ecosystem</h1></header>
+            <header><h1>Computation Model</h1></header>
             
             
-            <section><p>Scala also integrates well with the big data eco-system, which is mostly JVM based.</p>
-<p>In addition to Scala-native frameworks like Spark and Kafka, there are many frameworks on top of Java libraries like Scalding (Cascading), Algebird / Summingbird (Scalding and Storm), Scrunch (Crunch), and Flink (Java core with Scala API).</p></section>
+            <section><p>Spark can run over a variety of cluster managers, including Hadoop YARN, Apache Mesos, and a Standalone Scheduler.
+$$
+$$
+Spark creates a directed acyclic graph (DAG) of computation stages to submit jobs to the cluster manager.
+$$
+$$
+Spark uses a lazy evaluation model (i.e. postpones any processing until really required for actions).</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -709,7 +900,7 @@ RDD API will be our point of departure in this course.</p></section>
             </aside>
             
             <aside class="page_number">
-              18/24
+              24/38
             </aside>
 
           </footer>
@@ -718,12 +909,15 @@ RDD API will be our point of departure in this course.</p></section>
       
       <!-- slide source: slides.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_notes">
           <div class="inner">
             
             
-            <section><p>The Scala APIs are usually more flexible than say Hadoop streaming with Python/Perl, PySpark or Python/Ruby bolts in Storm, since you have direct access to the underlying API.</p>
-<p>There are also a wide range of data storage solutions that are built for or work well with JVM like Cassandra, HBase, Voldemort and Datomic.</p></section>
+            <section><p>Spark supports diverse workloads, but is optimized for low-latency iterative tasks.
+$$
+$$
+These sorts of computation occur often in Machine Learning and graph algorithms.</p>
+<p class="notes">Many Machine Learning algorithms require plenty of iterations before the result models get optimal, like logistic regression. The same applies to graph algorithms to traverse all the nodes and edges when needed. Iterative computations can increase their performance when the interim partial results are stored in memory. Spark can cache intermediate data in memory for faster model building and training.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -741,7 +935,7 @@ RDD API will be our point of departure in this course.</p></section>
             </aside>
             
             <aside class="page_number">
-              19/24
+              25/38
             </aside>
 
           </footer>
@@ -750,14 +944,18 @@ RDD API will be our point of departure in this course.</p></section>
       
       <!-- slide source: slides.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_notes">
           <div class="inner">
             
-            <header><h1>Why Scala: Functional paradigm</h1></header>
+            <header><h1>Spark vs Hadoop (2012)</h1></header>
             
             
-            <section><p>A third benefit is the functional paradigm which fits well within the Map/Reduce and big data model.</p>
-<p>Batch processing works on top of immutable data, transforms with map and reduce operations, and generates new copies. Real time log streams are essentially lazy streams.</p></section>
+            <section><p>Duration of the first and later iterations in Hadoop, HadoopBinMem and Spark for logistic regression and k-means using 100 GB of data on a 100-node cluster.
+<a href="https://www.cs.berkeley.edu/~matei/papers/2012/nsdi_spark.pdf">source</a>
+$$
+$$
+<img alt="" src="img/spark-vs-hadoop.png" /></p>
+<p class="notes">Hadoop: The Hadoop 0.20.2 stable release. HadoopBinMem: A Hadoop deployment that converts the input data into a low-overhead binary format in the first iteration to eliminate text parsing in later ones, and stores it in an in-memory HDFS instance.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -775,7 +973,7 @@ RDD API will be our point of departure in this course.</p></section>
             </aside>
             
             <aside class="page_number">
-              20/24
+              26/38
             </aside>
 
           </footer>
@@ -787,9 +985,46 @@ RDD API will be our point of departure in this course.</p></section>
         <div class="slide">
           <div class="inner">
             
+            <header><h1>RDD vs Distributed Shared Memory</h1></header>
             
-            <section><p>Most Scala data frameworks have the notion of some abstract data type that's extremely consistent with Scala's collection API.</p>
-<p>Glance at <code>TypedPipe</code> in Scalding and <code>RDD</code> in Spark, and you'll see that they all have the same set of methods, e.g. <code>map</code>, <code>flatMap</code>, <code>filter</code>, <code>reduce</code>, <code>fold</code> and <code>groupBy</code>.</p></section>
+            
+            <section><p>$$
+$$</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-9hbo{font-weight:bold;vertical-align:top}
+.tg .tg-yw4l{vertical-align:top}
+</style>
+
+<table class="tg">
+  <tr>
+    <th class="tg-9hbo"></th>
+    <th class="tg-9hbo">RDD</th>
+    <th class="tg-9hbo">DSM</th>
+  </tr>
+  <tr>
+    <td class="tg-9hbo">Evaluation</td>
+    <td class="tg-yw4l">lazy</td>
+    <td class="tg-yw4l">strict</td>
+  </tr>
+  <tr>
+    <td class="tg-9hbo">Writes</td>
+    <td class="tg-yw4l">coarse grained</td>
+    <td class="tg-yw4l">fine grained</td>
+  </tr>
+  <tr>
+    <td class="tg-9hbo">Recovery</td>
+    <td class="tg-yw4l">lineage</td>
+    <td class="tg-yw4l">check point</td>
+  </tr>
+  <tr>
+    <td class="tg-9hbo">Consistency</td>
+    <td class="tg-yw4l">trivial / immutable</td>
+    <td class="tg-yw4l">delegated</td>
+  </tr>
+</table></section>
             
           </div>
           <div class="presenter_notes">
@@ -807,7 +1042,7 @@ RDD API will be our point of departure in this course.</p></section>
             </aside>
             
             <aside class="page_number">
-              21/24
+              27/38
             </aside>
 
           </footer>
@@ -819,9 +1054,20 @@ RDD API will be our point of departure in this course.</p></section>
         <div class="slide">
           <div class="inner">
             
+            <header><h1>Spark Shell</h1></header>
             
-            <section><p>Many libraries also have frequent reference of category theory (eg monoids, monads, applicative functors etc) to guarantee the correctness of distributed operations.</p>
-<p>Equipped such knowledge it'll be a lot easier to understand techniques like map-side reduce.</p></section>
+            
+            <section><p>You start Spark shell using spark-shell script (available in bin directory).</p>
+<pre><code>$ ./bin/spark-shell
+Spark context available as sc.
+SQL context available as sqlContext.
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 1.6.0-SNAPSHOT
+      /_/
+</code></pre></section>
             
           </div>
           <div class="presenter_notes">
@@ -839,18 +1085,25 @@ RDD API will be our point of departure in this course.</p></section>
             </aside>
             
             <aside class="page_number">
-              22/24
+              28/38
             </aside>
 
           </footer>
         </div>
       </div>
       
-      <!-- slide source:  -->
+      <!-- slide source: slides.md -->
       <div class="slide-wrapper">
         <div class="slide">
           <div class="inner">
             
+            <header><h1>Spark Context</h1></header>
+            
+            
+            <section><p>Spark shell gives you the <code>sc</code> value which is the <a href="http://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.SparkContext">SparkContext</a> for the session.</p>
+<pre><code>scala&gt; sc
+res0: park.SparkContext = spark.SparkContext@2ac0cb64
+</code></pre></section>
             
           </div>
           <div class="presenter_notes">
@@ -863,8 +1116,79 @@ RDD API will be our point of departure in this course.</p></section>
 
           <footer>
             
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
             <aside class="page_number">
-              /24
+              29/38
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p>There is also an <code>sqlContext</code> object to use with Spark SQL.</p>
+<pre><code>scala&gt; sqlContext
+res1: spark.sql.SQLContext = spark.sql.hive.HiveContext@60ae950f
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              30/38
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p>To close Spark shell, you press Ctrl+D or type in <code>:q</code> (or any subset of <code>:quit</code>).</p>
+<pre><code>scala&gt; :quit
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              31/38
             </aside>
 
           </footer>
@@ -881,7 +1205,7 @@ RDD API will be our point of departure in this course.</p></section>
             
             <section><p>At a high level, every Spark application consists of a driver program that launches various parallel operations on a cluster.</p>
 <p>The driver program contains your application’s main function and defines distributed datasets on the cluster, then applies operations to them.</p>
-<p class="notes">In zeppelin, the driver program was the Spark interpreter itself.</p></section>
+<p class="notes">In Zeppelin, the driver program was the Spark interpreter itself.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -899,7 +1223,7 @@ RDD API will be our point of departure in this course.</p></section>
             </aside>
             
             <aside class="page_number">
-              23/24
+              32/38
             </aside>
 
           </footer>
@@ -912,7 +1236,13 @@ RDD API will be our point of departure in this course.</p></section>
           <div class="inner">
             
             
-            <section><p>Driver programs access Spark through a SparkContext object, which represents a connection to a computing cluster.</p></section>
+            <section><p>Driver programs access Spark through a <code>SparkContext</code> object, which represents a connection to a computing cluster.
+$$
+$$
+<code>SparkContext</code> in turn requires a <code>SparkConf</code> object for configuration.
+$$
+$$
+Refer to <a href="http://spark.apache.org/docs/latest/configuration.html">Spark Configuration</a> for further discussion of how to configure Spark.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -930,7 +1260,43 @@ RDD API will be our point of departure in this course.</p></section>
             </aside>
             
             <aside class="page_number">
-              24/24
+              33/38
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p>You can query for the values of Spark properties in Spark shell as follows:</p>
+<pre><code>scala&gt; sc.getConf.getOption("spark.local.dir")
+res1: Option[String] = None
+scala&gt; sc.getConf.getOption("spark.app.name")
+res2: Option[String] = Some(Spark shell)
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              34/38
             </aside>
 
           </footer>
@@ -955,7 +1321,175 @@ RDD API will be our point of departure in this course.</p></section>
           <footer>
             
             <aside class="page_number">
-              /24
+              /38
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Lecture 2: RDD's</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              35/38
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>RDD - Resilient Distributed Dataset</h1></header>
+            
+            
+            <section><p>Resilient Distributed Dataset (RDD) is the primary data abstraction in Spark. It is a distributed collection of items.</p>
+<p>The original paper is a great read: <a href="https://www.cs.berkeley.edu/~matei/papers/2012/nsdi_spark.pdf">https://www.cs.berkeley.edu/~matei/papers/2012/nsdi_spark.pdf</a></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              36/38
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p>At a high level, any Spark application creates RDDs out of some input, run (lazy) transformations of these RDDs to some other form (shape), and finally perform actions to collect or store data.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              37/38
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Transformations</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span></span><span class="n">map</span><span class="o">(</span><span class="n">f</span> <span class="k">:</span> <span class="kt">T</span> <span class="o">=&gt;</span> <span class="n">U</span><span class="o">)</span> <span class="k">:</span> <span class="kt">RDD</span><span class="o">[</span><span class="kt">T</span><span class="o">]</span> <span class="k">=&gt;</span> <span class="nc">RDD</span><span class="o">[</span><span class="kt">U</span><span class="o">]</span>
+<span class="n">filter</span><span class="o">(</span><span class="n">f</span> <span class="k">:</span> <span class="kt">T</span> <span class="o">=&gt;</span> <span class="nc">Bool</span><span class="o">)</span> <span class="k">:</span> <span class="kt">RDD</span><span class="o">[</span><span class="kt">T</span><span class="o">]</span> <span class="k">=&gt;</span> <span class="nc">RDD</span><span class="o">[</span><span class="kt">T</span><span class="o">]</span>
+<span class="n">flatMap</span><span class="o">(</span><span class="n">f</span> <span class="k">:</span> <span class="kt">T</span> <span class="o">=&gt;</span> <span class="nc">Seq</span><span class="o">[</span><span class="kt">U</span><span class="o">])</span> <span class="k">:</span> <span class="kt">RDD</span><span class="o">[</span><span class="kt">T</span><span class="o">]</span> <span class="k">=&gt;</span> <span class="nc">RDD</span><span class="o">[</span><span class="kt">U</span><span class="o">]</span>
+<span class="n">sample</span><span class="o">(</span><span class="n">fraction</span> <span class="k">:</span> <span class="kt">Float</span><span class="o">)</span> <span class="k">:</span> <span class="kt">RDD</span><span class="o">[</span><span class="kt">T</span><span class="o">]</span> <span class="k">=&gt;</span> <span class="nc">RDD</span><span class="o">[</span><span class="kt">T</span><span class="o">]</span>
+<span class="n">groupByKey</span><span class="o">()</span> <span class="k">:</span> <span class="kt">RDD</span><span class="o">[(</span><span class="kt">K</span>, <span class="kt">V</span><span class="o">)]</span> <span class="k">=&gt;</span> <span class="nc">RDD</span><span class="o">[(</span><span class="kt">K</span>, <span class="kt">Seq</span><span class="o">[</span><span class="kt">V</span><span class="o">])]</span>
+<span class="n">reduceByKey</span><span class="o">(</span><span class="n">f</span> <span class="k">:</span> <span class="o">(</span><span class="kt">V</span><span class="o">,</span><span class="kt">V</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">V</span><span class="o">)</span> <span class="k">:</span> <span class="kt">RDD</span><span class="o">[(</span><span class="kt">K</span>, <span class="kt">V</span><span class="o">)]</span> <span class="k">=&gt;</span> <span class="nc">RDD</span><span class="o">[(</span><span class="kt">K</span>, <span class="kt">V</span><span class="o">)]</span>
+<span class="n">union</span><span class="o">()</span> <span class="k">:</span> <span class="o">(</span><span class="kt">RDD</span><span class="o">[</span><span class="kt">T</span><span class="o">],</span><span class="nc">RDD</span><span class="o">[</span><span class="kt">T</span><span class="o">])</span> <span class="k">=&gt;</span> <span class="nc">RDD</span><span class="o">[</span><span class="kt">T</span><span class="o">]</span>
+<span class="n">join</span><span class="o">()</span> <span class="k">:</span> <span class="o">(</span><span class="kt">RDD</span><span class="o">[(</span><span class="kt">K</span>, <span class="kt">V</span><span class="o">)],</span><span class="nc">RDD</span><span class="o">[(</span><span class="kt">K</span>, <span class="kt">W</span><span class="o">)])</span> <span class="k">=&gt;</span> <span class="nc">RDD</span><span class="o">[(</span><span class="kt">K</span>, <span class="o">(</span><span class="kt">V</span>, <span class="kt">W</span><span class="o">))]</span>
+<span class="n">cogroup</span><span class="o">()</span> <span class="k">:</span> <span class="o">(</span><span class="kt">RDD</span><span class="o">[(</span><span class="kt">K</span>, <span class="kt">V</span><span class="o">)],</span><span class="nc">RDD</span><span class="o">[(</span><span class="kt">K</span>, <span class="kt">W</span><span class="o">)])</span> <span class="k">=&gt;</span> <span class="nc">RDD</span><span class="o">[(</span><span class="kt">K</span>, <span class="o">(</span><span class="kt">Seq</span><span class="o">[</span><span class="kt">V</span><span class="o">]</span>, <span class="kt">Seq</span><span class="o">[</span><span class="kt">W</span><span class="o">]))]</span>
+<span class="n">crossProduct</span><span class="o">()</span> <span class="k">:</span> <span class="o">(</span><span class="kt">RDD</span><span class="o">[</span><span class="kt">T</span><span class="o">],</span><span class="nc">RDD</span><span class="o">[</span><span class="kt">U</span><span class="o">])</span> <span class="k">=&gt;</span> <span class="nc">RDD</span><span class="o">[(</span><span class="kt">T</span>, <span class="kt">U</span><span class="o">)]</span>
+<span class="n">mapValues</span><span class="o">(</span><span class="n">f</span> <span class="k">:</span> <span class="kt">V</span> <span class="o">=&gt;</span> <span class="n">W</span><span class="o">)</span> <span class="k">:</span> <span class="kt">RDD</span><span class="o">[(</span><span class="kt">K</span>, <span class="kt">V</span><span class="o">)]</span> <span class="k">=&gt;</span> <span class="nc">RDD</span><span class="o">[(</span><span class="kt">K</span>, <span class="kt">W</span><span class="o">)]</span>
+<span class="n">sort</span><span class="o">(</span><span class="n">c</span> <span class="k">:</span> <span class="kt">Comparator</span><span class="o">[</span><span class="kt">K</span><span class="o">])</span> <span class="k">:</span> <span class="kt">RDD</span><span class="o">[(</span><span class="kt">K</span>, <span class="kt">V</span><span class="o">)]</span> <span class="k">=&gt;</span> <span class="nc">RDD</span><span class="o">[(</span><span class="kt">K</span>, <span class="kt">V</span><span class="o">)]</span>
+<span class="n">partitionBy</span><span class="o">(</span><span class="n">p</span> <span class="k">:</span> <span class="kt">Partitioner</span><span class="o">[</span><span class="kt">K</span><span class="o">])</span> <span class="k">:</span> <span class="kt">RDD</span><span class="o">[(</span><span class="kt">K</span>, <span class="kt">V</span><span class="o">)]</span> <span class="k">=&gt;</span> <span class="nc">RDD</span><span class="o">[(</span><span class="kt">K</span>, <span class="kt">V</span><span class="o">)]</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              38/38
+            </aside>
+
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source:  -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+
+
+          <footer>
+            
+            <aside class="page_number">
+              /38
             </aside>
 
           </footer>
@@ -989,7 +1523,7 @@ RDD API will be our point of departure in this course.</p></section>
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide4">What is Spark?</a></th>
+        <th><a href="#slide4">Matei Zaharia</a></th>
         <td><a href="#slide4">4</a></td>
       </tr>
       
@@ -1025,92 +1559,176 @@ RDD API will be our point of departure in this course.</p></section>
       
       
       <tr id="toc-row-10">
-        <th><a href="#slide10">Spark Stack</a></th>
+        <th><a href="#slide10">-</a></th>
         <td><a href="#slide10">10</a></td>
       </tr>
       
       
       <tr id="toc-row-11">
-        <th><a href="#slide11">Spark Core</a></th>
+        <th><a href="#slide11">Why Scala: Productivity</a></th>
         <td><a href="#slide11">11</a></td>
       </tr>
       
       
       <tr id="toc-row-12">
-        <th><a href="#slide12">Cluster Managers</a></th>
+        <th><a href="#slide12">Why Scala: Ecosystem</a></th>
         <td><a href="#slide12">12</a></td>
       </tr>
       
       
       <tr id="toc-row-13">
-        <th><a href="#slide13">SparkSQL</a></th>
+        <th><a href="#slide13">-</a></th>
         <td><a href="#slide13">13</a></td>
       </tr>
       
       
       <tr id="toc-row-14">
-        <th><a href="#slide14">Spark Streaming &amp; GraphX</a></th>
+        <th><a href="#slide14">Why Scala: Functional Paradigm</a></th>
         <td><a href="#slide14">14</a></td>
       </tr>
       
       
       <tr id="toc-row-15">
-        <th><a href="#slide15">MLLib</a></th>
+        <th><a href="#slide15">-</a></th>
         <td><a href="#slide15">15</a></td>
       </tr>
       
       
       <tr id="toc-row-16">
-        <th><a href="#slide16">Benefits of Tight Integration</a></th>
+        <th><a href="#slide16">-</a></th>
         <td><a href="#slide16">16</a></td>
       </tr>
       
       
       <tr id="toc-row-17">
-        <th><a href="#slide17">Why Scala: Productivity</a></th>
+        <th><a href="#slide17">Spark Stack</a></th>
         <td><a href="#slide17">17</a></td>
       </tr>
       
       
       <tr id="toc-row-18">
-        <th><a href="#slide18">Why Scala: Ecosystem</a></th>
+        <th><a href="#slide18">Spark Core</a></th>
         <td><a href="#slide18">18</a></td>
       </tr>
       
       
       <tr id="toc-row-19">
-        <th><a href="#slide19">-</a></th>
+        <th><a href="#slide19">SparkSQL</a></th>
         <td><a href="#slide19">19</a></td>
       </tr>
       
       
       <tr id="toc-row-20">
-        <th><a href="#slide20">Why Scala: Functional paradigm</a></th>
+        <th><a href="#slide20">Spark Streaming &amp; GraphX</a></th>
         <td><a href="#slide20">20</a></td>
       </tr>
       
       
       <tr id="toc-row-21">
-        <th><a href="#slide21">-</a></th>
+        <th><a href="#slide21">MLLib</a></th>
         <td><a href="#slide21">21</a></td>
       </tr>
       
       
       <tr id="toc-row-22">
-        <th><a href="#slide22">-</a></th>
+        <th><a href="#slide22">Benefits of Tight Integration</a></th>
         <td><a href="#slide22">22</a></td>
       </tr>
       
       
       <tr id="toc-row-23">
-        <th><a href="#slide23">Spark drivers</a></th>
+        <th><a href="#slide23">-</a></th>
         <td><a href="#slide23">23</a></td>
       </tr>
       
       
       <tr id="toc-row-24">
-        <th><a href="#slide24">-</a></th>
+        <th><a href="#slide24">Computation Model</a></th>
         <td><a href="#slide24">24</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-25">
+        <th><a href="#slide25">-</a></th>
+        <td><a href="#slide25">25</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-26">
+        <th><a href="#slide26">Spark vs Hadoop (2012)</a></th>
+        <td><a href="#slide26">26</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-27">
+        <th><a href="#slide27">RDD vs Distributed Shared Memory</a></th>
+        <td><a href="#slide27">27</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-28">
+        <th><a href="#slide28">Spark Shell</a></th>
+        <td><a href="#slide28">28</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-29">
+        <th><a href="#slide29">Spark Context</a></th>
+        <td><a href="#slide29">29</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-30">
+        <th><a href="#slide30">-</a></th>
+        <td><a href="#slide30">30</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-31">
+        <th><a href="#slide31">-</a></th>
+        <td><a href="#slide31">31</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-32">
+        <th><a href="#slide32">Spark drivers</a></th>
+        <td><a href="#slide32">32</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-33">
+        <th><a href="#slide33">-</a></th>
+        <td><a href="#slide33">33</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-34">
+        <th><a href="#slide34">-</a></th>
+        <td><a href="#slide34">34</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-35">
+        <th><a href="#slide35">Lecture 2: RDD's</a></th>
+        <td><a href="#slide35">35</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-36">
+        <th><a href="#slide36">RDD - Resilient Distributed Dataset</a></th>
+        <td><a href="#slide36">36</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-37">
+        <th><a href="#slide37">-</a></th>
+        <td><a href="#slide37">37</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-38">
+        <th><a href="#slide38">Transformations</a></th>
+        <td><a href="#slide38">38</a></td>
       </tr>
       
       

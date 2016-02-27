@@ -2,7 +2,7 @@
   <big><b>Spark for Data Scientists</b></big> </br>
   </br>
 
-  <code>{chris, jason}@datascience.com</code>
+  <code>{chris,jason}@datascience.com</code>
   <br/>
   <br/>
 
@@ -22,9 +22,11 @@
 
 ---
 
-#What is Spark?
-
-Spark extends the popular MapReduce model to efficiently support a wider range of computations.
+#Matei Zaharia
+![](img/matei_zaharia.jpg)
+$$
+$$
+"One of the Spark project goals was to deliver a platform that supports a very wide array of diverse workflows - not only MapReduce batch jobs (there were available in Hadoop already at that time), but also iterative computations like graph algorithms or Machine Learning. And also different scales of workloads from sub-second interactive jobs to jobs that run for many hours."
 
 ---
 
@@ -33,6 +35,8 @@ Spark extends the popular MapReduce model to efficiently support a wider range o
 ![](img/history.png)
 
 [https://medium.com/@markobonaci/the-history-of-hadoop-68984a11704](https://medium.com/@markobonaci/the-history-of-hadoop-68984a11704)
+
+.notes: https://www.youtube.com/watch?v=SxAxAhn-BDU
 
 ---
 
@@ -64,6 +68,62 @@ Spark extends the popular MapReduce model to efficiently support a wider range o
 
 ---
 
+Apache Spark is an open-source, parallel, distributed, general-purpose cluster computing framework with distributed, in-memory data processing.
+$$
+$$
+In contrast to Hadoop’s two-stage disk-based MapReduce processing engine, Spark’s multi-stage in-memory computing engine allows for running most computations in memory, and hence provides better performance for iterative applications, e.g. machine learning algorithms and interactive data mining.
+
+---
+
+#Why Scala: Productivity
+
+
+Basic syntax and Collections API are all that's needed to become productive with Spark.
+$$
+$$
+You use the same language (often the same code) for iterative exploration as you do for large jobs.
+
+.notes: Python and R are second-class citizens.
+
+---
+
+#Why Scala: Ecosystem
+
+Scala integrates well with the big data eco-system, which is also JVM based.
+$$
+$$
+In addition to Scala-native frameworks like Spark and Kafka, there are many frameworks on top of Java libraries like Scalding (Cascading), Algebird / Summingbird (Scalding and Storm), Scrunch (Crunch), and Flink (Java core with Scala API).
+
+---
+
+The Scala APIs are usually more flexible than say Hadoop streaming with Python/Perl, PySpark or Python/Ruby bolts in Storm, since you have direct access to the underlying API.
+$$
+$$
+There are also a wide range of data storage solutions that are built for or work well with JVM like Cassandra, HBase, Voldemort and Datomic.
+
+---
+
+#Why Scala: Functional Paradigm
+
+A third benefit is the functional paradigm which fits well within the Map/Reduce and big data model.
+$$
+$$
+Batch processing works on top of immutable data, transforms with combinators, and generates new copies. Real time log streams are essentially lazy streams.
+
+---
+
+Most Scala data frameworks have the notion of some abstract data type that's extremely consistent with Scala's collection API.
+$$
+$$
+Glance at `TypedPipe` in Scalding and `RDD` in Spark, and you'll see that they all have the same set of combinator methods, e.g. `map`, `flatMap`, `filter`, `reduce`, `fold` and `groupBy`.
+
+---
+
+Many libraries also have frequent reference of category theory (eg monoids, monads, applicative functors etc) to guarantee the correctness of distributed operations.
+$$
+$$
+Equipped such knowledge it'll be a lot easier to understand techniques like map-side reduce.
+
 ---
 
 #Spark Stack
@@ -77,12 +137,6 @@ Basic functionality of Spark: task scheduling, memory management, fault recovery
 $$
 $$
 RDD API will be our point of departure in this course.
-
----
-
-#Cluster Managers
-
-Spark can run over a variety of cluster managers, including Hadoop YARN, Apache Mesos, and a Spark's native Standalone Scheduler.
 
 ---
 
@@ -112,64 +166,138 @@ Spark's machine learning library.
 
 ---
 
-
 #Benefits of Tight Integration
 
 * Higher-level components in the stack benefit from improvements at the lower layers
 
 * Organizational costs associated with running the stack are minimized
 
-* Combine different processing models
+* Combine batch, interactive, and stream processing processing with a unified API
 
 .notes: For example, when Spark’s core engine adds an optimization, SQL and machine learning libraries automatically speed up as well. These costs include deployment, maintenance, testing, support, and others. This also means that each time a new component is added to the Spark stack, every organization that uses Spark will immediately be able to try this new component.
 
 ---
 
-#Why Scala: Productivity
-
-In the big data & machine learning world where most developers are from Python/R/Matlab background, Scala's syntax, or the subset needed for the domain, is a lot less intimidating than that of Java or C++.
-
-In my experience, basic syntax collections API and lambda (about 20% of the language features) is all that's needed for a new hire with no prior experience to become productive in processing data.
-
-At the same time, performance is usually better than traditional tools like Python or R. As one's skill develops over time, there's a clear transition path from imperative to more elegant FP style code while maintaining or even improving performance.
-
-The chart below clearly shows the growth of our main scalding repository over time. We spent a few months experimenting and after doubling the team size in early 2014, the number of jobs and LOC also exploded. Most developers have little Scala or even Java experience and some of the jobs are doing complex machine learning stuff.
+Spark’s design is also fairly simple and the Scala codebase is fairly small relative to the features it offers.
 
 ---
 
-#Why Scala: Ecosystem
 
-Scala also integrates well with the big data eco-system, which is mostly JVM based.
+#Computation Model
 
-In addition to Scala-native frameworks like Spark and Kafka, there are many frameworks on top of Java libraries like Scalding (Cascading), Algebird / Summingbird (Scalding and Storm), Scrunch (Crunch), and Flink (Java core with Scala API).
+Spark can run over a variety of cluster managers, including Hadoop YARN, Apache Mesos, and a Standalone Scheduler.
+$$
+$$
+Spark creates a directed acyclic graph (DAG) of computation stages to submit jobs to the cluster manager.
+$$
+$$
+Spark uses a lazy evaluation model (i.e. postpones any processing until really required for actions).
 
----
-
-The Scala APIs are usually more flexible than say Hadoop streaming with Python/Perl, PySpark or Python/Ruby bolts in Storm, since you have direct access to the underlying API.
-
-There are also a wide range of data storage solutions that are built for or work well with JVM like Cassandra, HBase, Voldemort and Datomic.
-
----
-
-#Why Scala: Functional paradigm
-
-A third benefit is the functional paradigm which fits well within the Map/Reduce and big data model.
-
-Batch processing works on top of immutable data, transforms with map and reduce operations, and generates new copies. Real time log streams are essentially lazy streams.
 
 ---
 
-Most Scala data frameworks have the notion of some abstract data type that's extremely consistent with Scala's collection API.
+Spark supports diverse workloads, but is optimized for low-latency iterative tasks.
+$$
+$$
+These sorts of computation occur often in Machine Learning and graph algorithms.
 
-Glance at `TypedPipe` in Scalding and `RDD` in Spark, and you'll see that they all have the same set of methods, e.g. `map`, `flatMap`, `filter`, `reduce`, `fold` and `groupBy`.
+
+.notes: Many Machine Learning algorithms require plenty of iterations before the result models get optimal, like logistic regression. The same applies to graph algorithms to traverse all the nodes and edges when needed. Iterative computations can increase their performance when the interim partial results are stored in memory. Spark can cache intermediate data in memory for faster model building and training.
+
+---
+
+
+#Spark vs Hadoop (2012)
+
+
+Duration of the first and later iterations in Hadoop, HadoopBinMem and Spark for logistic regression and k-means using 100 GB of data on a 100-node cluster.
+[source](https://www.cs.berkeley.edu/~matei/papers/2012/nsdi_spark.pdf)
+$$
+$$
+![](img/spark-vs-hadoop.png)
+
+.notes: Hadoop: The Hadoop 0.20.2 stable release. HadoopBinMem: A Hadoop deployment that converts the input data into a low-overhead binary format in the first iteration to eliminate text parsing in later ones, and stores it in an in-memory HDFS instance.
 
 ---
 
-Many libraries also have frequent reference of category theory (eg monoids, monads, applicative functors etc) to guarantee the correctness of distributed operations.
+#RDD vs Distributed Shared Memory
 
-Equipped such knowledge it'll be a lot easier to understand techniques like map-side reduce.
+$$
+$$
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
+.tg .tg-9hbo{font-weight:bold;vertical-align:top}
+.tg .tg-yw4l{vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-9hbo"></th>
+    <th class="tg-9hbo">RDD</th>
+    <th class="tg-9hbo">DSM</th>
+  </tr>
+  <tr>
+    <td class="tg-9hbo">Evaluation</td>
+    <td class="tg-yw4l">lazy</td>
+    <td class="tg-yw4l">strict</td>
+  </tr>
+  <tr>
+    <td class="tg-9hbo">Writes</td>
+    <td class="tg-yw4l">coarse grained</td>
+    <td class="tg-yw4l">fine grained</td>
+  </tr>
+  <tr>
+    <td class="tg-9hbo">Recovery</td>
+    <td class="tg-yw4l">lineage</td>
+    <td class="tg-yw4l">check point</td>
+  </tr>
+  <tr>
+    <td class="tg-9hbo">Consistency</td>
+    <td class="tg-yw4l">trivial / immutable</td>
+    <td class="tg-yw4l">delegated</td>
+  </tr>
+</table>
 
 ---
+
+#Spark Shell
+
+You start Spark shell using spark-shell script (available in bin directory).
+
+    $ ./bin/spark-shell
+    Spark context available as sc.
+    SQL context available as sqlContext.
+    Welcome to
+          ____              __
+         / __/__  ___ _____/ /__
+        _\ \/ _ \/ _ `/ __/  '_/
+       /___/ .__/\_,_/_/ /_/\_\   version 1.6.0-SNAPSHOT
+          /_/
+
+---
+
+#Spark Context
+
+Spark shell gives you the `sc` value which is the [SparkContext](http://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.SparkContext) for the session.
+
+    scala> sc
+    res0: park.SparkContext = spark.SparkContext@2ac0cb64
+
+---
+
+There is also an `sqlContext` object to use with Spark SQL.
+
+
+    scala> sqlContext
+    res1: spark.sql.SQLContext = spark.sql.hive.HiveContext@60ae950f
+
+---
+
+To close Spark shell, you press Ctrl+D or type in `:q` (or any subset of `:quit`).
+
+    scala> :quit
 
 ---
 
@@ -180,11 +308,71 @@ At a high level, every Spark application consists of a driver program that launc
 The driver program contains your application’s main function and defines distributed datasets on the cluster, then applies operations to them.
 
 
-.notes: In zeppelin, the driver program was the Spark interpreter itself.
+.notes: In Zeppelin, the driver program was the Spark interpreter itself.
 
 ---
 
-Driver programs access Spark through a SparkContext object, which represents a connection to a computing cluster.
+Driver programs access Spark through a `SparkContext` object, which represents a connection to a computing cluster.
+$$
+$$
+`SparkContext` in turn requires a `SparkConf` object for configuration.
+$$
+$$
+Refer to [Spark Configuration](http://spark.apache.org/docs/latest/configuration.html) for further discussion of how to configure Spark.
+
+---
+
+You can query for the values of Spark properties in Spark shell as follows:
+
+    scala> sc.getConf.getOption("spark.local.dir")
+    res1: Option[String] = None
+    scala> sc.getConf.getOption("spark.app.name")
+    res2: Option[String] = Some(Spark shell)
+
+
+---
+
+
+
+---
+
+
+#Lecture 2: RDD's
+
+
+---
+
+
+
+
+#RDD - Resilient Distributed Dataset
+
+Resilient Distributed Dataset (RDD) is the primary data abstraction in Spark. It is a distributed collection of items.
+
+The original paper is a great read: [https://www.cs.berkeley.edu/~matei/papers/2012/nsdi_spark.pdf](https://www.cs.berkeley.edu/~matei/papers/2012/nsdi_spark.pdf)
+
+---
+
+At a high level, any Spark application creates RDDs out of some input, run (lazy) transformations of these RDDs to some other form (shape), and finally perform actions to collect or store data.
+
+---
+
+#Transformations
+
+    !scala
+    map(f : T => U) : RDD[T] => RDD[U]
+    filter(f : T => Bool) : RDD[T] => RDD[T]
+    flatMap(f : T => Seq[U]) : RDD[T] => RDD[U]
+    sample(fraction : Float) : RDD[T] => RDD[T]
+    groupByKey() : RDD[(K, V)] => RDD[(K, Seq[V])]
+    reduceByKey(f : (V,V) => V) : RDD[(K, V)] => RDD[(K, V)]
+    union() : (RDD[T],RDD[T]) => RDD[T]
+    join() : (RDD[(K, V)],RDD[(K, W)]) => RDD[(K, (V, W))]
+    cogroup() : (RDD[(K, V)],RDD[(K, W)]) => RDD[(K, (Seq[V], Seq[W]))]
+    crossProduct() : (RDD[T],RDD[U]) => RDD[(T, U)]
+    mapValues(f : V => W) : RDD[(K, V)] => RDD[(K, W)]
+    sort(c : Comparator[K]) : RDD[(K, V)] => RDD[(K, V)]
+    partitionBy(p : Partitioner[K]) : RDD[(K, V)] => RDD[(K, V)]
 
 
 ---
