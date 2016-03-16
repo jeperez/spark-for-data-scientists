@@ -1,4 +1,4 @@
-# spark-for-data-scientists
+#Spark for Data Scientists
 An introduction to Spark for data scientists. These slides are loosely based on Karau et al's [Learning Spark: Lightning-Fast Big Data Analysis](http://shop.oreilly.com/product/0636920028512.do). 
 
 Slides are viewable [here](http://cem3394.github.io/spark-for-data-scientists).
